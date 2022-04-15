@@ -1,0 +1,73 @@
+@use "../abstracts/helper" as h;
+
+.btn {
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: inline-block;
+  border-radius: 0.3rem;
+  padding: 1.5rem 3.8rem;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  margin-top: 5rem;
+  color: h.$color-light-100;
+  background-color: h.$color-primary;
+  border: 0.1rem solid h.$color-primary;
+
+  &:hover {
+    background-color: h.$color-secondary;
+  }
+}
+
+.btn-white {
+  font-weight: 600;
+  color: h.$color-primary;
+  background-color: h.$color-light-100;
+  border: 0.1rem solid h.$color-light-100;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  &:hover {
+    color: h.$color-light-100;
+    background-color: h.$color-secondary;
+  }
+}
+
+.btn-outline {
+  color: h.$color-light-100;
+  background-color: transparent;
+  border: 0.2rem solid h.$color-primary;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: h.$color-primary;
+  }
+}
+
+.btn-text {
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.6rem 0;
+  font-size: 1.4rem;
+  color: h.$color-text-primary;
+  background-color: transparent;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: h.$color-primary;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .btn {
+    padding: 1.4rem 3rem;
+  }
+}

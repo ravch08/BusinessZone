@@ -1,0 +1,126 @@
+@use "../abstracts/helper" as h;
+
+footer {
+  margin-top: 5rem;
+  padding: 12rem 0 0;
+  background-color: h.$color-footerBar;
+
+  .footer-wrapper {
+    flex-wrap: wrap;
+    @extend .flexRow-start;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .social-media {
+    gap: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    svg {
+      fill: h.$color-light-100;
+    }
+  }
+}
+
+.footer-list {
+  @extend .flexColumn-start;
+
+  h3 {
+    margin-bottom: 2rem;
+    color: h.$color-light-100;
+  }
+
+  li {
+    padding: 0.3rem;
+  }
+
+  a {
+    color: h.$color-body;
+  }
+}
+
+.footer-top {
+  padding: 4rem;
+  width: 100%;
+  position: absolute;
+  top: -46%;
+  left: 0;
+  border-radius: 0.4rem;
+  @extend .flexRow-between;
+  -webkit-transform: translateY(-11.5rem);
+  -ms-transform: translateY(-11.5rem);
+  transform: translateY(-11.5rem);
+  background-color: h.$color-primary;
+
+  h2 {
+    color: h.$color-light-100;
+  }
+}
+
+.footer-bar {
+  color: white;
+  padding: 2rem 0;
+  margin-top: 5rem;
+  @extend .flexRow-center;
+  -webkit-clip-path: ellipse(52% 100% at 50% 100%);
+  clip-path: ellipse(52% 100% at 50% 100%);
+  background-color: darken($color: h.$color-secondary, $amount: 15%);
+}
+
+.backTop {
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  bottom: 3%;
+  right: 5%;
+  z-index: 99;
+  border-radius: 50%;
+  transform: scale(0);
+  cursor: pointer;
+  @extend .flexColumn-center;
+  -webkit-box-shadow: h.$box-shadow-md;
+  box-shadow: h.$box-shadow-md;
+  background-color: h.$color-Dark-400;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  svg {
+    fill: white;
+    -webkit-transform: translateY(-0.1rem);
+    -ms-transform: translateY(-0.1rem);
+    transform: translateY(-0.1rem);
+  }
+
+  &:hover {
+    background-color: h.$color-tertiary;
+  }
+}
+
+.active {
+  transform: scale(1);
+}
+
+// ----- Media Queries -------------------------------------------------------------------
+
+@media screen and (max-width: 768px) {
+  .footer-wrapper {
+    gap: 3.5rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-top {
+    top: -20%;
+    display: flex;
+    padding: 3rem;
+    flex-direction: column;
+    text-align: center;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

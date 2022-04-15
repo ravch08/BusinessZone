@@ -1,0 +1,58 @@
+@use "../abstracts/helper" as h;
+
+.heading {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.service-container {
+  gap: 3rem;
+  @extend .flexRow-between;
+
+  .service-item {
+    padding: 2rem;
+    border-radius: 0.3rem;
+    background-color: h.$color-light-100;
+    -webkit-box-shadow: h.$box-shadow-lg;
+    box-shadow: h.$box-shadow-lg;
+    border-bottom: 0.6rem solid h.$color-primary;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out,
+      border 0.3s ease-in-out;
+
+    svg {
+      fill: h.$color-primary;
+      padding-bottom: 2rem;
+    }
+
+    p {
+      padding: 2rem 0;
+    }
+
+    &:hover {
+      -webkit-box-shadow: h.$box-shadow-md;
+      box-shadow: h.$box-shadow-md;
+      -webkit-transform: translateY(-0.8rem);
+      -ms-transform: translateY(-0.8rem);
+      transform: translateY(-0.8rem);
+      border-bottom: 0.6rem solid h.$color-secondary;
+    }
+  }
+}
+
+// ----- Media Queries -------------------------------------------------------------------
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .service-container {
+    flex-wrap: wrap;
+
+    .service-item {
+      max-width: 46%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .service-container {
+    flex-direction: column;
+  }
+}

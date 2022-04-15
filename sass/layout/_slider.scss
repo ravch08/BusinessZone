@@ -1,0 +1,64 @@
+@use "../abstracts/helper" as h;
+
+#slider {
+  padding: 0;
+
+  .swiper-slide {
+    @extend .flexRow-between;
+  }
+}
+
+#banner-slider {
+  height: 95vh;
+
+  h1 {
+    opacity: 0;
+    transform: translateY(-8rem);
+    transition: opacity 2.5s ease-in-out, transform 2.5s ease-in-out;
+  }
+
+  p,
+  button {
+    opacity: 0;
+    transform: translateY(8rem);
+    transition: opacity 2.5s ease-in-out, transform 2.5s ease-in-out,
+      background-color 2.5s ease-in-out;
+  }
+
+  .slider-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    height: 90vh;
+    transform: translateX(12rem);
+    transition: opacity 2.5s ease-in-out, transform 2.5s ease-in-out;
+  }
+
+  .slider-content {
+    width: 40%;
+    margin-left: 10%;
+
+    p {
+      width: 80%;
+    }
+  }
+
+  .swiper-slide-active h1,
+  .swiper-slide-active p,
+  .swiper-slide-active img,
+  .swiper-slide-active .btn-primary {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ----- Media Queries -------------------------------------------------------------------
+
+@media screen and (max-width: 1024px) {
+  #banner-slider {
+    .slider-content {
+      width: 95%;
+    }
+  }
+}

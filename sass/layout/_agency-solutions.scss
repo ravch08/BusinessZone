@@ -1,0 +1,152 @@
+@use "../abstracts/helper" as h;
+
+#agency {
+  padding: 16rem 0 5rem;
+}
+
+.agency-wrapper {
+  @extend .flexRow-between;
+
+  .agency-content {
+    -ms-flex-preferred-size: 40%;
+    flex-basis: 45%;
+
+    h2 {
+      margin-bottom: 4rem;
+    }
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  figure {
+    -ms-flex-preferred-size: 45%;
+    flex-basis: 50%;
+    padding: 2rem;
+  }
+}
+
+#solutions {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 75%;
+  background-color: h.$color-secondary;
+
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.solution-wrapper {
+  @extend .flexRow-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+
+  .solution-img {
+    position: absolute;
+    top: 6%;
+    left: 0;
+    width: 72vh;
+  }
+}
+
+.solution-content {
+  width: 50%;
+
+  p {
+    margin: 3rem 0;
+  }
+
+  h2,
+  h3 {
+    color: h.$color-light-100;
+  }
+
+  li {
+    z-index: 1;
+    padding: 1.5rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    &:not(:last-child)::before {
+      content: "";
+      width: 0.2rem;
+      height: 10rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: absolute;
+      top: 24%;
+      left: 3.6%;
+      z-index: -1;
+      background-color: h.$color-light-100;
+    }
+  }
+
+  span {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    margin-right: 2rem;
+    @extend .flexRow-center;
+    color: h.$color-light-100;
+    background-color: h.$color-primary;
+  }
+
+  .d-flex {
+    gap: 2.5rem;
+    margin-top: 4rem;
+  }
+}
+
+// ----- Media Queries -------------------------------------------------------------------
+
+@media screen and (max-width: 1300px) {
+  #solutions {
+    height: 90%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #agency {
+    padding: 5rem 0;
+  }
+
+  .agency-wrapper {
+    gap: 2rem;
+    flex-direction: column-reverse;
+
+    figure {
+      padding: 0;
+    }
+  }
+
+  .solution-wrapper {
+    .solution-img {
+      display: none;
+    }
+  }
+
+  .solution-content {
+    width: 95%;
+
+    // li:not(:last-child)::before {
+    //   left: 7.6%;
+    // }
+  }
+}

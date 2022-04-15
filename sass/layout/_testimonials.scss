@@ -1,0 +1,64 @@
+@use "../abstracts/helper" as h;
+
+#testimonial {
+  .swiper {
+    padding: 2rem 0;
+  }
+
+  .swiper-slide {
+    padding: 2.5rem;
+    border-radius: 0.2rem;
+    width: 36rem !important;
+    box-shadow: h.$box-shadow-md;
+    background-color: h.$color-light-100;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 10%;
+    color: h.$color-Dark-400;
+  }
+
+  blockquote {
+    margin: 1.5rem 0;
+  }
+
+  .d-flex {
+    gap: 0.6rem;
+    svg {
+      fill: goldenrod;
+    }
+  }
+}
+
+.client-detail {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+
+  svg {
+    opacity: 0.3;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    fill: h.$color-primary;
+  }
+
+  figure {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and(max-width: 768px ) {
+  #testimonial {
+    .swiper-slide {
+      width: 30rem !important;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
+}
