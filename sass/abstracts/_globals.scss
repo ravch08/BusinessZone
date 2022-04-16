@@ -115,6 +115,30 @@ small {
   font-size: 80%;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(8rem);
+  transition: transform 0.8s ease-in, opacity 0.9s ease-in,
+    background-color 0.4s ease-in-out;
+
+  &.appear {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-8rem);
+  transition: transform 0.8s ease-in, opacity 0.9s ease-in,
+    border 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+
+  &.appear {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
 /* OPTIONAL -- remove animations for people who've turned them off */
 
 @media (prefers-reduced-motion: reduce) {

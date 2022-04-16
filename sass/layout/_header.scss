@@ -12,10 +12,20 @@ header {
     gap: 2.5rem;
     @extend .flexRow-between;
   }
+
+  .nav-brand {
+    font-size: 2.2rem;
+    color: h.$color-Dark-400;
+
+    span {
+      font-weight: 800;
+      color: h.$color-primary;
+    }
+  }
 }
 
 .sticky {
-  padding: 2.5rem 0;
+  padding: 2.2rem 0;
   box-shadow: h.$box-shadow-md;
   background-color: h.$color-light-100;
 }

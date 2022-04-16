@@ -13,12 +13,30 @@ footer {
   .container {
     position: relative;
   }
+}
+
+.footer-logo {
+  @extend .flexColumn-start;
+
+  .footer-brand {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    color: h.$color-light-400;
+
+    span {
+      font-weight: 800;
+      transition: color 0.3s ease-in-out;
+      color: lighten($color: h.$color-primary, $amount: 10%);
+    }
+
+    &:hover span {
+      color: h.$color-Dark-100;
+    }
+  }
 
   .social-media {
     gap: 2rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    @extend .flexRow-between;
 
     svg {
       fill: h.$color-light-100;
@@ -35,11 +53,16 @@ footer {
   }
 
   li {
-    padding: 0.3rem;
+    padding: 0.6rem 0;
   }
 
   a {
     color: h.$color-body;
+    transition: color 0.3s ease-in;
+
+    &:hover {
+      color: h.$color-light-100;
+    }
   }
 }
 

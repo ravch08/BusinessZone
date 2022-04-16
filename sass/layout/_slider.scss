@@ -22,7 +22,7 @@
     opacity: 0;
     transform: translateY(8rem);
     transition: opacity 2.5s ease-in-out, transform 2.5s ease-in-out,
-      background-color 2.5s ease-in-out;
+      background-color 0.3s ease-in-out;
   }
 
   .slider-img {
@@ -30,7 +30,7 @@
     top: 0;
     right: 0;
     opacity: 0;
-    height: 90vh;
+    height: 96vh;
     transform: translateX(12rem);
     transition: opacity 2.5s ease-in-out, transform 2.5s ease-in-out;
   }
