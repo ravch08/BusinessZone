@@ -113,7 +113,8 @@ const swiperClient = new Swiper('#client-slider', {
     loopedSlides: 50,
     grabCursor: true,
     slidesPerView: "auto",
-    centeredSlides: false,
+    breakpointsInverse: true,
+    loopFillGroupWithBlank: false,
 
     navigation: {
         nextEl: ".swiper-button-next",

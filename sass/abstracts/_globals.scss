@@ -22,9 +22,10 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  font-size: v.$fs-body;
-  color: v.$color-body;
   overflow-x: hidden;
+  color: v.$color-body;
+  font-size: v.$fs-body;
+  line-height: v.$lh-body;
   font-family: v.$fm-body;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
