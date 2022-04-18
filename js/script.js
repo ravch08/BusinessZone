@@ -121,12 +121,6 @@ const swiperClient = new Swiper('#client-slider', {
         prevEl: ".swiper-button-prev",
     },
 
-    breakpoints: {
-        350: { slidesPerView: 1 },
-        1024: { slidesPerView: 2 },
-        1440: { slidesPerView: 3 }
-    },
-
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
