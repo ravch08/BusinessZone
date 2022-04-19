@@ -10,6 +10,7 @@ const hamburgerMenu = document.querySelector('.hamburger-menu');
 const fadeIns = document.querySelectorAll('.fade-in');
 const slideIns = document.querySelectorAll('.slide-in');
 
+
 // ----- Intersection Observer -------------------------------------------------------------------
 
 
@@ -57,7 +58,6 @@ slideIns.forEach(slideIn => {
 });
 
 
-
 // ----- Event Listeners -------------------------------------------------------------------
 
 
@@ -83,6 +83,7 @@ backTop.addEventListener('click', () => {
         behavior: "smooth"
     });
 });
+
 
 // ----- Swiper -------------------------------------------------------------------
 
@@ -112,6 +113,7 @@ const swiperClient = new Swiper('#client-slider', {
     spaceBetween: 30,
     loopedSlides: 50,
     grabCursor: true,
+    centeredSlides: true,
     slidesPerView: "auto",
     breakpointsInverse: true,
     loopFillGroupWithBlank: false,
@@ -120,6 +122,7 @@ const swiperClient = new Swiper('#client-slider', {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+
 
     autoplay: {
         delay: 2500,
